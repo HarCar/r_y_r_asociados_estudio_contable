@@ -1,0 +1,39 @@
+<!-- bienvenida.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Agregar los siguientes enlaces para Bootstrap -->
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Bienvenida</title>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h1 class="text-center">Bienvenido</h1>
+          </div>
+          <div class="card-body">
+            <p class="lead">¡Hola, <span id="nombre-usuario"></span>!</p>
+            <p>Te damos la bienvenida a nuestra página. Aquí aprenderás sobre Node.js y MongoDB.</p>
+            <p>Node.js es un entorno de tiempo de ejecución que te permite ejecutar JavaScript en el lado del servidor. MongoDB es una base de datos NoSQL que permite almacenar y recuperar datos de manera eficiente.</p>
+            <a href="/documentacion" class="btn btn-info">Ver Documentación de Endpoints</a>
+
+            <a href="/" class="btn btn-danger">Cerrar Sesión</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Obtener el nombre de usuario de la URL y mostrarlo
+    const urlParams = new URLSearchParams(window.location.search);
+    const username = urlParams.get('username');
+    document.getElementById('nombre-usuario').textContent = username;
+  </script>
+</body>
+</html>

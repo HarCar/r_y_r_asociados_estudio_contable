@@ -1,0 +1,39 @@
+<!-- registro.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Agregar los siguientes enlaces para Bootstrap -->
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="bootstrap.bundle.min.js"></script>
+  <title>Registro de Usuario</title>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h1 class="text-center">Registro de Usuario</h1>
+          </div>
+          <div class="card-body">
+            <form id="registration-form">
+              <div class="mb-3">
+                <input type="text" id="new-username" class="form-control" placeholder="Nombre de usuario" required>
+              </div>
+              <div class="mb-3">
+                <input type="password" id="new-password" class="form-control" placeholder="Contraseña" required>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
+            </form>
+            <p class="mt-3" id="registration-message"></p>
+            <p class="text-center">Ya tienes una cuenta? <a href="/">Inicia sesión aquí</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="registro.js"></script>
+</body>
+</html>
